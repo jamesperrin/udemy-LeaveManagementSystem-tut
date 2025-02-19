@@ -1,0 +1,59 @@
+HowTo: Manually scaffold the (Create) view in the VS Code terminal
+
+dotnet aspnet-codegenerator view Create Create --model LeaveManagementSystem.Web.Data.LeaveRequest --dataContext LeaveManagementSystem.Web.Data.ApplicationDbContext --referenceScriptLibraries --useDefaultLayout --relativeFolderPath Views\LeaveRequests
+
+
+Note:
+
+dotnet aspnet-codegenerator view -h
+
+Usage: aspnet-codegenerator [arguments] [options]
+
+Arguments:
+
+  generator  Name of the generator. Check available generators below.
+
+Options:
+
+  -p|--project             Path to .csproj file in the project.
+
+  -n|--nuget-package-dir
+
+  -c|--configuration       Configuration for the project (Possible values: Debug/ Release)
+
+  -tfm|--target-framework  Target Framework to use. (Short folder name of the tfm. eg. net46)
+
+  -b|--build-base-path
+
+  --no-build
+
+Selected Code Generator: view
+
+Generator Arguments:
+
+  viewName     : Name of the view
+
+  templateName : The view template to use, supported view templates: 'Empty|Create|Edit|Delete|Details|List'
+
+
+Generator Options:
+
+  --model|-m                          : Model class to use
+
+  --dataContext|-dc                   : DbContext class to use
+
+  --referenceScriptLibraries|-scripts : Switch to specify whether to reference script libraries in the generated views
+
+  --layout|-l                         : Custom Layout page to use
+
+  --useDefaultLayout|-udl             : Switch to specify that default layout should be used for the views
+
+  --force|-f                          : Use this option to overwrite existing files
+
+  --relativeFolderPath|-outDir        : Specify the relative output folder path from project where the file needs to be generated, if not specified, file will be generated in the project folder
+
+  --controllerNamespace|-namespace    : Specify the name of the namespace to use for the generated controller
+
+  --partialView|-partial              : Generate a partial view, other layout options (-l and -udl) are ignored if this is specified
+
+  --databaseProvider|-dbProvider      : Database provider to use. Options include 'sqlserver' (default), 'sqlite', 'cosmos', 'postgres'.
